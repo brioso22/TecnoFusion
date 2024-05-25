@@ -17,7 +17,7 @@ class Usuarios extends Model
         'nombre',
         'apellido',
         'correo',
-        'contraseña'
+        'password' // Cambiado de 'contraseña' a 'password'
     ];
 
     public function ventas()
