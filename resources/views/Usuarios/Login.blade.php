@@ -139,19 +139,19 @@
                 </div>
             </div>
             <div class="card-body">
-                <form>
+                <form action="{{ route('login.post') }}" method="POST">
                     @csrf
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Correo" name="email">
+                        <input type="text" class="form-control" placeholder="Correo" name="correo" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" name="password">
+                        <input type="password" class="form-control" placeholder="Password" name="password" required>
                     </div>
                     <div class="icon-container">
                         <span><i class="fab fa-google"></i></span>
@@ -169,7 +169,7 @@
             </div>
             <div class="card-footer">
                 <div class="links">
-                    ¿Aun no te has registrado? Pulsa para<a href="#"> Registrarte</a>
+                    ¿Aun no te has registrado? Pulsa para<a href="{{ route('registro') }}"> Registrarte</a>
                 </div>
             </div>
         </div>
