@@ -12,8 +12,8 @@ class CreateUsuariosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('correo');
-            $table->string('contraseña');
+            $table->string('correo')->unique();
+            $table->string('password');
             $table->timestamps();
         });
     }

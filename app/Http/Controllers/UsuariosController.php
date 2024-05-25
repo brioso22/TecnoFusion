@@ -33,7 +33,7 @@ class UsuariosController extends Controller
             'nombre' => 'required|string|max:255',
             'apellido' => 'required|string|max:255',
             'correo' => 'required|string|email|max:255|unique:usuarios',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:1|confirmed',
         ]);
     
         // Crear el nuevo usuario
