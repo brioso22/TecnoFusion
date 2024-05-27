@@ -1,8 +1,9 @@
 import './bootstrap';
-import {createApp} from 'vue';
-import BarraNav from './components/BarraNav.vue'
+import { createApp } from 'vue';
+import BarraNav from './components/BarraNav.vue';
 
-
-const app = createApp(BarraNav);
-app.component("BarraNav-component",BarraNav);
-app.mount("#app");
+createApp({
+  components: {
+    'barra-nav': BarraNav,
+  },
+}).mount('#app');
