@@ -128,6 +128,10 @@ input:focus {
  </style>
 </head>
 <body>
+
+    @php
+        $url = "login-google";
+    @endphp
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -176,12 +180,14 @@ input:focus {
                     </div>
                     <div class="form-group centered">
                         <input type="submit" value="Registrar" class="btn register_btn">
+                        <button class="my-button" onclick="window.location.href='{{ $url }}'">Ir a Ejemplo.com</button>
                     </div>
                 </form>
             </div>
             <div class="card-footer">
                 <div class="links">
                     ¿Ya tienes una cuenta? <a href="{{ route('login') }}">Iniciar Sesión</a>
+                    
                 </div>
             </div>
         </div>

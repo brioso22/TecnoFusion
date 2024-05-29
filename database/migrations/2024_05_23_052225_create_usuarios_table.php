@@ -10,10 +10,12 @@ class CreateUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('apellido');
+            $table->string('external_id')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('apellido')->nullable();
             $table->string('correo')->unique();
-            $table->string('password');
+            $table->string('contraseña')->nullable();
+            $table->string('external_auth')->nullable();
             $table->timestamps();
         });
     }

@@ -1,4 +1,5 @@
 <template>
+
     <header>
       <div class="container">
         <div class="logo">
@@ -6,7 +7,7 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a  href="#">Inicio</a></li>
             <li><a href="#">Tienda</a></li>
             <li><a href="#">Preguntas Frecuentes</a></li>
             <li><a href="#">Donaciones</a></li>

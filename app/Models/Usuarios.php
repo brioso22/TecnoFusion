@@ -19,7 +19,19 @@ class Usuarios extends Model implements AuthenticatableContract
         'nombre',
         'apellido',
         'correo',
-        'password' // Cambiado de 'contraseña' a 'password'
+        'password', // Cambiado de 'contraseña' a 'password'
+        'external_id', // ID único proporcionado por Google
+        'external_auth', // Método de autenticación externa, por ejemplo 'google'
+    ];
+
+
+    protected $hidden = [
+        'contraseña',
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 
     public function ventas()

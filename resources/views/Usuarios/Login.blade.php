@@ -130,6 +130,9 @@
     </style>
 </head>
 <body>
+    @php
+        $url = "login-google";
+    @endphp
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -154,7 +157,7 @@
                         <input type="password" class="form-control" placeholder="Password" name="password" required>
                     </div>
                     <div class="icon-container">
-                        <span><i class="fab fa-google"></i></span>
+                        <span><i class="fab fa-google " onclick="window.location.href='{{ $url }}'" ></i></span>
                         <span><i class="fab fa-microsoft"></i></span>
                         <span><i class="fab fa-apple"></i></span>
                     </div>
