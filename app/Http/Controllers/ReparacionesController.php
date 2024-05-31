@@ -10,6 +10,13 @@ class ReparacionesController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+     public function soporte()
+     {
+         return view("soporteTecnico.soporteTecnico");
+     }
+
+     
     public function index()
     {
         //

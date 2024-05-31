@@ -12,7 +12,7 @@ class VentasController extends Controller
      */
     public function index()
     {
-        //
+        return view('Tienda.tienda');
     }
 
     /**

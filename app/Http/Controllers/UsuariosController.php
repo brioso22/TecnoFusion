@@ -17,7 +17,9 @@ class UsuariosController extends Controller
     public function index(){
         return view('index');
     }
-
+    public function preguntas(){
+        return view('preguntas_Frecuentes.preguntasF');
+    }
     public function loginIn(Request $request)
     {
         // Validar los datos del formulario

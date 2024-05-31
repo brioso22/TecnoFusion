@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #9032bb; /* Color de fondo */
+      background-color: #005C53;
     }
 
     header {
@@ -59,7 +59,7 @@
     }
 
     .auth-buttons button:hover {
-      background-color: #9032bb;
+      background-color: #751e99;
     }
 
     .hero {
@@ -118,8 +118,14 @@
   <div id="app">
     <barra-nav 
       login-url="{{ route('login') }}" 
-      register-url="{{ route('registro') }}">
-    </barra-nav>
+      register-url="{{ route('registro') }}"
+      index="{{ route('index') }}"
+      tienda="{{ route('tienda') }}"
+      preguntas-f="{{ route('preguntas') }}"
+      donaciones="{{ route('donaciones') }}"
+      soporte="{{ route('soporteTecnico') }}"
+
+    ></barra-nav>
   </div>
 
   <script type="module" src="{{ mix('js/app.js') }}"></script>
