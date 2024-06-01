@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css?family=Numans');
 
         html, body {
-            background-image: url('https://www.xtrafondos.com/wallpapers/retrowave-lineas-montanas-3063.jpg');
+            background-image: url('{{ asset("img/fond_login.png") }}');            
             background-size: cover;
             background-repeat: no-repeat;
             height: 100%;
@@ -27,7 +27,7 @@
         }
 
         .card {
-            height: 470px;
+            height: 500px;
             width: 430px;
             background-color: rgba(0, 0, 0, 0.5);
             margin: auto;
@@ -142,13 +142,18 @@
                 </div>
             </div>
             <div class="card-body">
+                @if (session('error'))
+                <div class="alert alert-success">
+                        {{ session('error') }}
+                    </div>
+                @endif
                 <form action="{{ route('login.post') }}" method="POST">
                     @csrf
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Correo" name="correo" required>
+                        <input type="email" class="form-control" placeholder="Correo" name="correo" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">

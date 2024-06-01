@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -14,12 +13,16 @@ class UsuariosController extends Controller
         return view('Usuarios.Login');
     }
 
-    public function index(){
-        return view('index');
+    public function index()
+    {
+        return view('index.index');
     }
-    public function preguntas(){
+
+    public function preguntas()
+    {
         return view('preguntas_Frecuentes.preguntasF');
     }
+
     public function loginIn(Request $request)
     {
         // Validar los datos del formulario
@@ -30,14 +33,14 @@ class UsuariosController extends Controller
 
         // Intentar autenticar al usuario
         $usuario = Usuarios::where('correo', $request->correo)->first();
-
+        
         if ($usuario && Hash::check($request->password, $usuario->password)) {
             // Iniciar sesión manualmente
             Auth::login($usuario);
-            return redirect()->route('index'); // Cambia a la ruta que desees después de iniciar sesión
+            return redirect()->route('index');
         } else {
             // La autenticación falló
-            return redirect()->back()->with('error', 'Correo o contraseña incorrectos');
+            return redirect()->route('login')->with('error', 'Error de usuario o contraseña');
         }
     }
 

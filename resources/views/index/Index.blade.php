@@ -63,7 +63,6 @@
     }
 
     .hero {
-      background: url('https://img.freepik.com/foto-gratis/configuracion-juegos-angulo-alto-interiores_23-2149829123.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716508800&semt=ais_user') no-repeat center center/cover;
       color: #fff;
       text-align: left;
       position: relative;
@@ -112,10 +111,19 @@
     .hero button:hover {
       background-color: #9032bb;
     }
+    iframe{
+      margin: 0;
+      padding: 0;
+      height: 150px;
+      top: 0;
+      
+     
+    }
   </style>
 </head>
 <body>
   <div id="app">
+
     <barra-nav 
       login-url="{{ route('login') }}" 
       register-url="{{ route('registro') }}"
@@ -124,9 +132,12 @@
       preguntas-f="{{ route('preguntas') }}"
       donaciones="{{ route('donaciones') }}"
       soporte="{{ route('soporteTecnico') }}"
-
     ></barra-nav>
   </div>
+  <div>
+  <iframe src="{{ url('/slide') }}" width="100%" height="150px" frameborder="1" ></iframe>
+  </div>
+
 
   <script type="module" src="{{ mix('js/app.js') }}"></script>
   <section class="hero">

@@ -10,7 +10,7 @@
            @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html, body {
-    background-image: url('https://www.xtrafondos.com/wallpapers/retrowave-lineas-montanas-3063.jpg');
+    background-image: url('{{ asset("img/fond_login.png") }}');            
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;

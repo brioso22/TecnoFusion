@@ -67,10 +67,14 @@ export default {
 </script>
 
 <style scoped>
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #9032bb; /* Color de fondo agregado */
+  padding: 0;
+  height: 150px;
+  overflow: hidden;
 }
 
 header {
