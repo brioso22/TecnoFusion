@@ -12,7 +12,7 @@ class DonacionesController extends Controller
      */
     public function index()
     {
-        //
+        return view("Donaciones.donaciones");
     }
 
     /**
