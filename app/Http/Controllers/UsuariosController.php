@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -33,7 +34,7 @@ class UsuariosController extends Controller
 
         // Intentar autenticar al usuario
         $usuario = Usuarios::where('correo', $request->correo)->first();
-        
+
         if ($usuario && Hash::check($request->password, $usuario->password)) {
             // Iniciar sesión manualmente
             Auth::login($usuario);
@@ -59,15 +60,21 @@ class UsuariosController extends Controller
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        // Crear el nuevo usuario
-        Usuarios::create([
-            'nombre' => $request->nombre,
-            'apellido' => $request->apellido,
-            'correo' => $request->correo,
-            'password' => Hash::make($request->password), // Asegura la contraseña antes de almacenarla
-        ]);
+        try {
+            // Crear el nuevo usuario
+            Usuarios::create([
+                'nombre' => $request->nombre,
+                'apellido' => $request->apellido,
+                'correo' => $request->correo,
+                'password' => Hash::make($request->password), // Asegura la contraseña antes de almacenarla
+            ]);
 
-        // Redirigir con un mensaje de éxito
-        return redirect()->route('registro')->with('success', 'Usuario registrado exitosamente');
+            // Redirigir con un mensaje de éxito
+            return redirect()->route('registro')->with('success', 'Usuario registrado exitosamente');
+
+        } catch (\Exception $e) {
+            // Redirigir con un mensaje de error en caso de que falle el registro
+            return redirect()->route('registro')->with('error', 'Error al registrar el usuario: ' . $e->getMessage());
+        }
     }
 }

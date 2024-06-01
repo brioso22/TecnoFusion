@@ -141,11 +141,28 @@ input:focus {
                 </div>
             </div>
             <div class="card-body">
-                @if(session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
+            @if (session('success'))
+        <div style="color: green;">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div style="color: red;">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div style="color: red;">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
                 <form method="POST" action="{{ route('registro.post') }}">
                     @csrf
                     <div class="input-group form-group">
@@ -164,13 +181,13 @@ input:focus {
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Correo" name="correo" required>
+                        <input type="email" class="form-control" placeholder="Correo" name="correo"  required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password" minlength="8" required>
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">

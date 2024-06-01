@@ -159,7 +159,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                        <input type="password" class="form-control" placeholder="Password" name="password" minlength="8" required>
                     </div>
                     <div class="icon-container">
                         <span><i class="fab fa-google " onclick="window.location.href='{{ $url }}'" ></i></span>
