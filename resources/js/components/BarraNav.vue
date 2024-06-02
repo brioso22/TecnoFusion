@@ -1,4 +1,5 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <header>
     <div class="container">
       <div class="logo">
@@ -6,16 +7,16 @@
       </div>
       <nav>
         <ul>
-          <li @mouseover="showTooltip('Página de incio', $event)" @mouseout="hideTooltip">
+          <li @mouseover="showTooltip('Página de inicio', $event)" @mouseout="hideTooltip">
             <a href="#" @click="redirectTo(index)">Inicio</a>
           </li>
           <li @mouseover="showTooltip('Visita nuestra tienda con promociones y productos inigualables', $event)" @mouseout="hideTooltip">
             <a href="#" @click="redirectTo(tienda)">Tienda</a>
           </li>
-          <li @mouseover="showTooltip('Consulta tu dudades recurrentes en la seccion de preguntas frecuentes', $event)" @mouseout="hideTooltip">
+          <li @mouseover="showTooltip('Consulta tus dudas recurrentes en la sección de preguntas frecuentes', $event)" @mouseout="hideTooltip">
             <a href="#" @click="redirectTo(preguntasF)">Preguntas Frecuentes</a>
           </li>
-          <li @mouseover="showTooltip('¿Tienes harware que ya no necesites? Haz una donación en nuestra seccion especial', $event)" @mouseout="hideTooltip">
+          <li @mouseover="showTooltip('¿Tienes hardware que ya no necesites? Haz una donación en nuestra sección especial', $event)" @mouseout="hideTooltip">
             <a href="#" @click="redirectTo(donaciones)">Donaciones</a>
           </li>
           <li @mouseover="showTooltip('Obtén soporte técnico para todos tus equipos', $event)" @mouseout="hideTooltip">
@@ -27,10 +28,8 @@
         <button @click="redirectTo(loginUrl)" @mouseover="showTooltip('Inicia sesión', $event)" @mouseout="hideTooltip">Iniciar Sesión</button>
         <button @click="redirectTo(registerUrl)" @mouseover="showTooltip('Regístrate', $event)" @mouseout="hideTooltip">Registro</button>
       </div>
-
       <div>
-        <img src="./assets/ava.png" width="50px" height="50px" srcset="">
-
+        <img src="./assets/ava.png" class="avatar">
       </div>
     </div>
     <span class="tooltip" v-if="tooltipVisible" :style="{ top: tooltipY + 'px', left: tooltipX + 'px' }">{{ tooltipText }}</span>
@@ -101,8 +100,6 @@ body {
   font-family: Arial, sans-serif;
   background-color: #9032bb;
   padding: 0;
-  height: 150px;
-  overflow: hidden;
 }
 
 header {
@@ -110,19 +107,20 @@ header {
   color: #fff;
   padding: 10px 0;
   position: relative;
+  width: 100%;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
+  flex-wrap: nowrap;
 }
 
 .logo h1 {
   margin: 0;
+  font-size: calc(1em + 1vw);
 }
 
 nav ul {
@@ -130,31 +128,42 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
 }
 
 nav ul li {
   margin: 0 10px;
-  position: relative;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: calc(0.5em + 0.5vw);
+}
+
+.auth-buttons {
+  display: flex;
 }
 
 .auth-buttons button {
   background-color: #9032bb;
   border: none;
   color: #fff;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: calc(0.5px + 0.5vw) calc(8px + 1vw);
+  margin-left: 5px;
   cursor: pointer;
   border-radius: 5px;
+  font-size: calc(0.6em + 0.5vw);
 }
 
 .auth-buttons button:hover {
   background-color: #751e99;
+}
+
+.avatar {
+  width: calc(50px + 0.5vw);
+  height: calc(50px + 0.5vw);
 }
 
 a:hover, button:hover {
@@ -172,6 +181,5 @@ a:hover, button:hover {
   white-space: nowrap;
   z-index: 1000;
   font-size: 12px;
-  font-size: 2.5dvb;
 }
 </style>
