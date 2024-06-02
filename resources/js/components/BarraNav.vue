@@ -27,6 +27,11 @@
         <button @click="redirectTo(loginUrl)" @mouseover="showTooltip('Inicia sesión', $event)" @mouseout="hideTooltip">Iniciar Sesión</button>
         <button @click="redirectTo(registerUrl)" @mouseover="showTooltip('Regístrate', $event)" @mouseout="hideTooltip">Registro</button>
       </div>
+
+      <div>
+        <img src="./assets/ava.png" width="50px" height="50px" srcset="">
+
+      </div>
     </div>
     <span class="tooltip" v-if="tooltipVisible" :style="{ top: tooltipY + 'px', left: tooltipX + 'px' }">{{ tooltipText }}</span>
   </header>
