@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #005C53;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo h1 {
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .auth-buttons button {
+    background-color: #9032bb;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .auth-buttons button:hover {
+    background-color: #751e99;
+  }
+
+  .hero {
+    color: #fff;
+    text-align: left;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero .content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin-left: 5%;
+  }
+
+  .hero h2 {
+    font-size: 3em;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+  }
+
+  .hero button {
+    background-color: #9032bb;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .hero button:hover {
+    background-color: #9032bb;
+  }
+  iframe{
+    margin: 0;
+    padding: 0;
+    height: 150px;
+    top: 0;
+    
+   
+  }
