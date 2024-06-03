@@ -11,7 +11,6 @@
 <div id="app">
     <barra-nav 
       login-url="{{ route('login') }}" 
-      register-url="{{ route('registro') }}"
       index="{{ route('index') }}"
       tienda="{{ route('tienda') }}"
       preguntas-f="{{ route('preguntas') }}"

@@ -25,8 +25,7 @@
         </ul>
       </nav>
       <div class="auth-buttons">
-        <button @click="redirectTo(loginUrl)" @mouseover="showTooltip('Inicia sesión', $event)" @mouseout="hideTooltip">Iniciar Sesión</button>
-        <button @click="redirectTo(registerUrl)" @mouseover="showTooltip('Regístrate', $event)" @mouseout="hideTooltip">Registro</button>
+        <button @click="redirectTo(loginUrl)" @mouseover="showTooltip('Inicia sesión', $event)" @mouseout="hideTooltip">Ingresar</button>
       </div>
       <div>
         <img src="./assets/ava.png" class="avatar">
@@ -44,10 +43,7 @@ export default {
       type: String,
       required: true,
     },
-    registerUrl: {
-      type: String,
-      required: true,
-    },
+ 
     index: {
       type: String,
       required: true,
@@ -147,7 +143,7 @@ nav ul li a {
 }
 
 .auth-buttons button {
-  background-color: #9032bb;
+  background-color: #46A2FD;
   border: none;
   color: #fff;
   padding: calc(0.5px + 0.5vw) calc(8px + 1vw);
@@ -155,10 +151,14 @@ nav ul li a {
   cursor: pointer;
   border-radius: 5px;
   font-size: calc(0.6em + 0.5vw);
+  font-weight: 300;
+  font-weight: bold;
 }
 
 .auth-buttons button:hover {
-  background-color: #751e99;
+  background-color: #fffafa;
+  color: #46A2FD;
+  transition: color 1s;
 }
 
 .avatar {

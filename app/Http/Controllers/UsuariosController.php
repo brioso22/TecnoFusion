@@ -11,7 +11,7 @@ class UsuariosController extends Controller
 {
     public function login()
     {
-        return view('Usuarios.Login');
+        return view('Usuarios.login_Registro');
     }
 
     public function index()
@@ -47,7 +47,7 @@ class UsuariosController extends Controller
 
     public function registro()
     {
-        return view('Usuarios.Registro');
+        return view('Usuarios.login_Registro');
     }
 
     public function create(Request $request)
