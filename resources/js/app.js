@@ -1,9 +1,12 @@
 import './bootstrap';
 import { createApp } from 'vue';
 import BarraNav from './components/BarraNav.vue';
+import SocialIcons from './components/SocialIcons.vue';
 
-createApp({
+const app = createApp({
   components: {
     'barra-nav': BarraNav,
+    'social-icons': SocialIcons,
   },
-}).mount('#app');
+});
+app.mount('#app');

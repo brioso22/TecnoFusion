@@ -7,7 +7,7 @@ body {
   header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1px 0;
   }
 
   .container {
@@ -58,10 +58,10 @@ body {
     color: #fff;
     text-align: left;
     position: relative;
-    min-height: 100vh;
+    min-height: 1vh;
     display: flex;
     align-items: flex-start;
-    padding-top: 50px;
+    padding-top: 0px;
   }
 
   .hero .overlay {
@@ -75,9 +75,9 @@ body {
 
   .hero .content {
     position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin-left: 5%;
+    z-index: 0.5;
+    max-width: 650px;
+    margin-left: 1%;
   }
 
   .hero h2 {
@@ -88,14 +88,14 @@ body {
 
   .hero p {
     font-size: 1.2em;
-    margin: 0 0 20px 0;
+    margin: 0 0 0 0;
   }
 
   .hero button {
     background-color: #9032bb;
     border: none;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     border-radius: 5px;
   }
