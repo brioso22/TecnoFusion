@@ -1,0 +1,90 @@
+body, html {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Barra de navegación */
+  
+  .back {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 23.35rem;
+    display: flex;
+  }
+  a {
+    color:#1B061B;
+    font-style: normal;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    font-size: inherit;
+  }
+  
+  .nv {
+    background-color: #fff;
+    margin: 2rem;
+    border-radius: 6.25rem;
+    width: 93.75%;
+    height: 3.6rem;
+    border: solid 0.5px #1B061B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin: 0.25% 1% 0.25% 3%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .main-menu, .auth-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 1rem 0 0;
+  }
+  
+  .main-menu li, .auth-menu li {
+    margin: 0 1rem;
+  }
+  
+  .auth-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-menu li button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #1B061B;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-menu li button:hover {
+    background-color: #fff;
+    color: #1B061B;
+    transition: 0.4s ease-in-out;
+  }
+  
+  li:hover {
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    color: #502f50;
+  }
+  
+  #locacion {
+    text-decoration-line: underline;
+    font-weight: bold;
+  }
