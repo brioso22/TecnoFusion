@@ -50,9 +50,11 @@
         </p>
         <br>
             <center >
+                <a href="#Quienes">
                 <button class="arrow-button">
                     IR
                 </button>
+                </a>
             </center>
     </div>
 
@@ -65,9 +67,11 @@
         </p>
         <br>
             <center >
+                <a href="#sobrepro">
                 <button class="arrow-button">
                     IR
                 </button>
+                </a>
             </center>
     </div>
     <div class="div3">
@@ -79,9 +83,11 @@
         </p>
         <br>
             <center >
+                <a href="#dondeEn">
                 <button class="arrow-button">
                     IR
                 </button>
+                </a>
             </center>
     </div>
     <div class="div4">
@@ -93,9 +99,12 @@
         </p>
         <br>
             <center >
-                <button class="arrow-button">
+            <a href="#appM">
+            <button class="arrow-button">
                     IR
                 </button>
+                    </a>
+               
             </center>
     </div>
 
@@ -107,7 +116,7 @@
 <br>
 <br>
     <br>
-        <center><h1>¿Quienes Somos?</h1></center>
+        <center><h1 id="Quienes">¿Quienes Somos?</h1></center>
         <br>
             <div class="TextoDeOpciones1">
             <img src="{{ asset('img/pc1.jpeg') }}" class="imgLapton">
@@ -121,7 +130,7 @@
 <br>
 <br>
 <br>
-<center><h1>Sobre los productos</h1></center>
+<center><h1 id="sobrepro">Sobre los productos</h1></center>
 <br>
     <div class="TextoDeOpciones2">
         <div class="c2">
@@ -143,7 +152,7 @@
 
     <div class="cuadro">
 
-        <h2>¿Donde encontrarnos?</h2>
+        <h2 id="dondeEn">¿Donde encontrarnos?</h2>
         <br>
         <br>
         <img src="{{ asset('img/map.jpeg') }}" alt=""  class="imgGP">
@@ -155,7 +164,7 @@
         
     </div>
     <div class="cuadro">
-        <h2>¿App movil?</h2>
+        <h2 id="appM">¿App movil?</h2>
         <br>
         <br>
         <img src="{{ asset('img/android.jpeg') }}" alt=""  class="imgAP">
@@ -186,7 +195,7 @@
                     <span></span>
                     <span></span>
                     <div class="icon">
-                        <i><img src="./assest/f.png" class="iconsInt"  /></i>
+                        <i><img src="{{ asset('img/f.png') }}" class="iconsInt"  /></i>
                     </div>
                 </div>
             </a>
@@ -199,7 +208,7 @@
                     <span></span>
                     <span></span>
                     <div class="icon">
-                        <center><i><img src="./assest/i.png" class="iconsInt"  /></i>                        </center>
+                        <center><i><img src="{{ asset('img/i.png') }}"  class="iconsInt"  /></i>                        </center>
                     </div>
                 </div>
             </a>
@@ -212,7 +221,7 @@
                     <span></span>
                     <span></span>
                     <div class="icon">
-                        <i><img src="./assest/x.png" class="iconsInt" /></i>
+                        <img src="{{ asset('img/x.png') }}" class="iconsInt" />
                     </div>
                 </div>
             </a>
