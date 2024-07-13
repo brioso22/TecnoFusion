@@ -5,11 +5,13 @@ body, html {
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    position: relative;
   }
   
   /* Barra de navegación */
   
   .back {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -17,6 +19,7 @@ body, html {
     display: flex;
   }
   a {
+    position: relative;
     color:#1B061B;
     font-style: normal;
     text-decoration: none; /* Remove underline */
@@ -25,6 +28,7 @@ body, html {
   }
   
   .nv {
+    position: relative;
     background-color: #fff;
     margin: 2rem;
     border-radius: 6.25rem;
@@ -37,10 +41,12 @@ body, html {
   }
   
   .logo {
+    position: relative;
     margin: 0.25% 1% 0.25% 3%;
   }
   
   nav {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
@@ -48,6 +54,7 @@ body, html {
   }
   
   .main-menu, .auth-menu {
+    position: relative;
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -56,11 +63,13 @@ body, html {
   
   .main-menu li, .auth-menu li {
     margin: 0 1rem;
+    position: relative;
   }
   
   .auth-menu {
     display: flex;
     align-items: center;
+    position: relative;
   }
   
   .auth-menu li button {
@@ -70,21 +79,25 @@ body, html {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    position: relative;
   }
   
   .auth-menu li button:hover {
     background-color: #fff;
     color: #1B061B;
     transition: 0.4s ease-in-out;
+    position: relative;
   }
   
   li:hover {
     cursor: pointer;
     transition: 0.4s ease-in-out;
     color: #502f50;
+    position: relative;
   }
   
   #locacion {
+    position: relative;
     text-decoration-line: underline;
     font-weight: bold;
   }
